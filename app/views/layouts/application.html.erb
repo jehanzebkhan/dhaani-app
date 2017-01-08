@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DhaaniApp</title>
-    <%= csrf_meta_tags %>
+<head>
+<title>Dhaani® Clothing Supply & Distribution in Islamabad, Pakistan</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <div id="container">
+   <div id="header">
+     <%= render partial: '/layouts/header' %>
+   </div>
+   <div><%= render partial: '/layouts/menu' %></div>
+   <div id="body">
+     <%= yield %>
+   </div>
+   <div id="footer">
+     <%= render partial: '/layouts/footer' %>
+   </div>
+ </div>
+</body>
 </html>
